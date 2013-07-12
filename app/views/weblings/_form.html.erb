@@ -1,0 +1,25 @@
+<%= form_for(@webling) do |f| %>
+  <% if @webling.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@webling.errors.count, "error") %> prohibited this webling from being saved:</h2>
+
+      <ul>
+      <% @webling.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Where_shall_we_go %><br />
+    <%= f.text_area :URL %>
+  </div>
+  <div class="field">
+    <%= f.label :For_heavens_sake_why %><br />
+    <%= f.text_area :Description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @webling.URL %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @webling.Description %>
+</p>
+
+
+<%= link_to 'Edit', edit_webling_path(@webling) %> |
+<%= link_to 'Back', weblings_path %>
